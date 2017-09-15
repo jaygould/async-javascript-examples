@@ -2,18 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Async JS examples | Jay Gould</title>
     <style type="text/css">
-
+      #logo {
+        width: 200px;
+      }
     </style>
   </head>
   <body>
-
-<script type="text/javascript">
-function autorun() {}
-if (window.addEventListener) window.addEventListener('load', autorun, false);
-else if (window.attachEvent) window.attachEvent('onload', autorun);
-else window.onload = autorun;
-</script>
+    <img id="logo" src="assets/logo.png"  />
+    <p>
+      Open the console and press start to run the process.
+    </p>
+    <h1>Promises</h1>
+    <div id="promise">
+      <div>
+        <h2>Test 1 (Simple Promise)</h2>
+        <div class="test1content"></div>
+      </div>
+      <div>
+        <h2>Test 2 (Chained Promise)</h2>
+        <div class="test2content"></div>
+      </div>
+    </div>
+    <script src="dist/bundle.js"></script>
   </body>
 </html>
