@@ -42,7 +42,8 @@ export const chainPromise = () => {
 		.then(sortedUserData => {
 			//the final then() in the chain will be the resolved value for this chain,
 			//and we can access this value by another then() function
-			//from the userDataChain (below)
+			//from the userDataChain (below)\
+			console.log(sortedUserData);
 			return saveUserData(sortedUserData);
 		})
 		.catch(error => {
