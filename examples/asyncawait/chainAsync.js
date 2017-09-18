@@ -16,10 +16,16 @@ export const chainAsyncawait = () => {
 	//use async keyword and await keyword means there's no chaining, and it looks
 	//like synchronous code
 	async function userDataFuntion() {
-		let users = await getUserData();
-		let updatedUsers = _addToData(users);
-		let finalUsers = await _saveUserData(updatedUsers);
-		$test2div.innerHTML = `Received test 2 data: ${JSON.stringify(finalUsers)}`;
+		try {
+			let users = await getUserData();
+			let updatedUsers = _addToData(users);
+			let finalUsers = await _saveUserData(updatedUsers);
+			$test2div.innerHTML = `Received test 2 data: ${JSON.stringify(
+				finalUsers
+			)}`;
+		} catch (err) {
+			console.error(err);
+		}
 	}
 	userDataFuntion();
 };

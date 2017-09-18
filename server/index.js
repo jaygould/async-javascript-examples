@@ -7,3 +7,33 @@ export const getUserData = () => {
 		}, 1000);
 	});
 };
+export const getHouseData = () => {
+	console.log('Get Houses started');
+
+	const houseArray = [
+		{ house: 'Tyrell' },
+		{ house: 'Baratheon' },
+		{ house: 'Frey' }
+	];
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			console.log('Get Houses finished');
+			resolve(houseArray);
+		}, 1000);
+	});
+};
+export const getDragonData = () => {
+	console.log('Get Dragons started');
+
+	const dragonArray = [
+		{ dragon: 'Drogon' },
+		{ dragon: 'Rhaegal' },
+		{ dragon: 'Viserion' }
+	];
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			console.log('Get Dragons finished');
+			resolve(dragonArray);
+		}, 4000);
+	});
+};
